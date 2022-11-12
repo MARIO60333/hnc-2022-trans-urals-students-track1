@@ -61,7 +61,7 @@ GET:
 }
 ```
 
-## `/singus`
+## `/signus`
 Регистрация стримера
 
 ### Запрос:
@@ -94,3 +94,33 @@ JSON:
   "status": 0
 }
 ```
+
+## ``/signin``
+Форма входа
+
+### Запрос: 
+
+POST: 
+
+* ``username``: Никнейм
+* ``password``: Пароль
+
+### Пример: 
+
+JSON:
+
+```json
+{
+  "username": "<Username>",
+  "password": "<Password>"
+}
+```
+
+### Ответ: 
+
+JSON: 
+
+```json
+{
+  "status": 0
+}

@@ -88,7 +88,7 @@ router.post("/postping", function (req, res) {
 //   });
 // });
 
-router.post("/singus", function (req, res) {
+router.post("/signus", function (req, res) {
   const client = new MongoClient(mongo_url);
 
   console.log("[SingUs] MongoDB client opened (init)");
@@ -154,6 +154,12 @@ router.post("/singus", function (req, res) {
     }
   }
   run();
+});
+
+router.post("/signin", function (req, res) {
+  res.json({
+    msg: `POST Pong: ${req.body.msg}`,
+  });
 });
 
 module.exports = router;
