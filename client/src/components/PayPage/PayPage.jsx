@@ -5,7 +5,7 @@ import Input from "../UI/Input";
 import Textarea from "../UI/Textarea";
 
 
-const PayPage = ({maxlength}) => {
+const PayPage = () => {
 
     // value for data from input
     const [name,setName] = useState()
@@ -15,7 +15,6 @@ const PayPage = ({maxlength}) => {
         return e.preventDefault()
     }
 
-    console.log(name)
 
     return (
         <div className={s.container__main}>
@@ -30,7 +29,6 @@ const PayPage = ({maxlength}) => {
                     <Textarea maxlength={100}/>
                     <br/>
                     <Input onClick={(e) => handleClick(e)}
-                           className={s.input}
                            type="submit"
                            placeholder={"Send money"}/>
                 </form>

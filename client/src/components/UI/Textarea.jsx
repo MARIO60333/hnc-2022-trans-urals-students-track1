@@ -3,7 +3,7 @@ import s from "../UI/Input.module.css";
 
 const Textarea = ({maxlength}) => {
 
-    const [comment,setComment] = useState(0)
+    const [comment,setComment] = useState()
 
     console.log(comment)
     return (
@@ -14,7 +14,7 @@ const Textarea = ({maxlength}) => {
                       maxlength={maxlength}
                       className={s.input}>
             </textarea>
-            <div>{comment.length} / {maxlength}</div>
+            <div>{comment ? comment.length : 0} / {maxlength}</div>
 
         </>
     );

@@ -8,6 +8,10 @@ import Layout from "./components/Layout/Layout";
 import Streamer from "./components/Streamer/Streamer";
 import PayPage from "./components/PayPage/PayPage";
 import Error from "./components/Error/Error";
+import Login
+    from "./components/Registration/Login";
+import Registration
+    from "./components/Registration/Registration";
 
 const App = () => {
 
@@ -22,6 +26,8 @@ const App = () => {
                         <Route path="dashboard" element={<Donate/>}/>
                         <Route path="streamername" element={<PayPage/>}/>
                         <Route path="streamer" element={<Streamer/>}/>
+                        <Route path="login" element={<Login/>}/>
+                        <Route path="register" element={<Registration/>}/>
                         <Route path="*" element={<Error/>}/>
                     </Route>
                 </Routes>

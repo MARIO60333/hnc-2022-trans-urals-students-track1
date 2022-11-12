@@ -6,7 +6,9 @@ const Header = () => {
         <>
             <div className={s.row}>
                 <ul className={s.ul}>
-                    <Link className={s.item} to="/">Home</Link>
+                    <Link className={s.home} to="/">
+                        <span className={s.span}>eZ</span>EzMoney
+                    </Link>
 
                     <Link className={s.item} to="/dashboard">Dashboard</Link>
 
@@ -15,7 +17,7 @@ const Header = () => {
 
                     <div className={s.secondary}>
                         <Link className={s.item} to="login">log in</Link>
-                        <Link className={s.item} to="logout">Log on</Link>
+                        <Link className={s.item} to="register">Registration</Link>
                     </div>
                 </ul>
             </div>
