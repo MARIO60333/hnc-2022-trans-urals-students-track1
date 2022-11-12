@@ -1,10 +1,13 @@
 import React from 'react';
+import s from './Button.module.css'
 
-const Button = () => {
+const Button = ({text}) => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <button className={s.btn}>
+                {text}
+            </button>
+        </>
     );
 };
 
