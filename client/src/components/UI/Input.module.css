@@ -1,0 +1,21 @@
+
+.input{
+    border: none;
+    border-bottom: 4px solid black;
+    background: #f3f3f3;
+    padding: 15px 25px;
+    margin: 15px 5px;
+    outline: none;
+    transition: .5s ease all;
+
+}
+
+.input:focus{
+    border-bottom: 4px solid #ef3124;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+    min-height: 15rem;
+}

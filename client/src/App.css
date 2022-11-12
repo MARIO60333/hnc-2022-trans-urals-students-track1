@@ -1,12 +1,16 @@
 .app {
   text-align: center;
-  background: #000;
+  background: #fffcfc;
   min-height: 100vh;
 }
 
-*{
+.wrapper{
+  max-width: 1200px;
+  margin:0 auto;
+}
+*, *:before, *:after{
   box-sizing: border-box;
-  color:#fff;
+  color:#000;
   text-decoration: none;
   margin:0;
   padding:0;
