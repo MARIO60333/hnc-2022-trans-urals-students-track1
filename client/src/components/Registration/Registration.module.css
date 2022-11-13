@@ -1,0 +1,25 @@
+.input  {
+    padding:10px;
+    border-radius:10px;
+    margin: 10px 15px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+.input_btn{
+    margin-top: 15px;
+    background:#ef3124;
+    font-size:28px ;
+    color:#fff;
+    padding: 15px 20px;
+    transition: .2s ease all;
+}
+
+.input_btn:hover{
+    background: #fd2020;
+}

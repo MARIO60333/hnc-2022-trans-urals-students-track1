@@ -42,17 +42,6 @@
     /*color:#f5e9e9;*/
 }
 
-
-.second{
-    margin-top: 3rem;
-    margin-bottom: 30rem;
-    background: #ef3124;
-    min-height: 100vh;
-    color: #fff;
-    border-radius: 30px;
-    text-align: center;
-}
-
 @media (max-width: 768px) {
     .item__title{
         font-size: 42px;

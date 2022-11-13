@@ -12,6 +12,8 @@ import Login
     from "./components/Registration/Login";
 import Registration
     from "./components/Registration/Registration";
+import Dashboard
+    from "./components/Dashboard/Dashboard";
 
 const App = ({password,username}) => {
 
@@ -23,7 +25,7 @@ const App = ({password,username}) => {
                     <Route path="/" element={<Layout/>}>
                         <Route index element={<Home/>}/>
                         <Route path="donate" element={<Donate/>}/>
-                        <Route path="dashboard" element={<Donate/>}/>
+                        <Route path="dashboard" element={<Dashboard/>}/>
                         <Route path="streamername" element={<PayPage/>}/>
                         <Route path="streamer" element={<Streamer/>}/>
                         <Route path="login" element={<Login password={password} username={username}/>}/>
