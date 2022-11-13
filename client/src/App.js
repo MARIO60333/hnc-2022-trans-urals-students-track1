@@ -14,6 +14,7 @@ import Registration
     from "./components/Registration/Registration";
 import Dashboard
     from "./components/Dashboard/Dashboard";
+import {Navigate} from "react-router";
 
 const App = ({password,username}) => {
 

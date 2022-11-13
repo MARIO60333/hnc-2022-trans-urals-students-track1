@@ -29,7 +29,15 @@ const Registration = () => {
                 phoneNumber:e.phoneNumber.toString()
             }
         }).then(function (response) {
-            console.log(response.data)
+            console.log(response.data.status)
+            if (response.data.status === 0) {
+                alert('Вы успешно зарегестриовались!')
+            }
+            else{
+                alert('Ошибка при регистрации,' +
+                    ' пользователь с таким' +
+                    ' именем уже существует')
+            }
         })
             .catch(function (error) {
                 console.log(error)
