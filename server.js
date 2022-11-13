@@ -33,7 +33,7 @@ webSocketServer.on("connection", (ws) => {
 
   // КОСТЫЛЬ ДЛЯ ДЕМОНСТРАЦИИ
 
-  let lastId = "095cee7e-a37b-41d2-833b-60040777408a";
+  let lastId = "81af0a53-4aeb-4dfc-bd40-1027508a203b";
 
   setInterval(function () {
     console.log("check donations");
@@ -56,7 +56,7 @@ webSocketServer.on("connection", (ws) => {
         }))
       }
     });
-  }, 15000);
+  }, 5000);
 
   // КОНЕЦ КОСТЫЛЯ
 });

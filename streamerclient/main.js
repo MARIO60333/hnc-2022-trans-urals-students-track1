@@ -23,7 +23,7 @@ socket.onmessage = function (event) {
   } 
 
   if(json.status == 200) {
-    new Notification("don", `${json.debug.message}`)
+    new Notification("don", null, json.debug)
     console.log(json.debug)
   }
 };

@@ -19,6 +19,7 @@ body * {
     border-radius: 4px;
     color: white;
     animation: fadeIn 0.5s linear 0s forwards, fadeOut 0.5s linear 5.5s forwards;
+    min-width: 40%;
 }
 
 .ok {
@@ -27,8 +28,9 @@ body * {
 }
 
 .don {
-    border: 2px solid #00e000;
-    background: #00e000B0;
+    border: 2px solid #0074e0;
+    background: #0074e0B0;
+    text-align: center;
 }
 
 .err {
