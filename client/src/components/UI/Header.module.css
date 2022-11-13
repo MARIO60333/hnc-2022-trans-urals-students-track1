@@ -20,13 +20,13 @@
     padding:10px 35px;
     margin:0px 5px 15px auto;
     border:1px solid #000;
-    border-radius: 50px;
+    /*border-radius: 50px;*/
     transition: .55s ease all;
 
 }
 
 .item:hover{
-    background: #f5e9e9;
+    /*background: #f5e9e9;*/
     color:#4f4c4b;
 }
 

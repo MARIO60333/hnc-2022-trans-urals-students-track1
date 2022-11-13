@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import dollar from '../../img/dollar-svgrepo-com.svg';
 import studio from '../../img/fm.svg';
 import safe from '../../img/safe-svgrepo-com.svg';
 import s from './Home.module.css';
+import axios from '../../http/index'
 
 const Home = () => {
+
+    const [first, setFirst] = useState(false)
+
+
     return (
         <>
             <div className={s.container__main}>
@@ -45,7 +50,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            
+
+            <div>
+                <div className={s.second}>
+                    <div className={s.second__row}>
+
+                    </div>
+                </div>
+            </div>
+
         </>
     );
 };

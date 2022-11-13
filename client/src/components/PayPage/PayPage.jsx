@@ -11,6 +11,7 @@ const PayPage = () => {
     const [name,setName] = useState()
 
 
+
     const handleClick = (e) => {
         return e.preventDefault()
     }
@@ -26,7 +27,7 @@ const PayPage = () => {
                            placeholder="Write your name"
                            type="text"/>
                     <br/>
-                    <Textarea maxlength={100}/>
+                    <Textarea maxlength={10}/>
                     <br/>
                     <Input onClick={(e) => handleClick(e)}
                            type="submit"
