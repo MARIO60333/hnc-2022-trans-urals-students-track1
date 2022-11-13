@@ -10,7 +10,7 @@ const Header = () => {
                         <span className={s.span}>eZ</span>EzMoney
                     </Link>
 
-                    <Link className={s.item} to="/dashboard">Dashboard</Link>
+                    {/*<Link className={s.item} to="/dashboard">Dashboard</Link>*/}
 
                     <Link className={s.item} to="/donate">Donate</Link>
                     <Link className={s.item} to="/streamername">streamername</Link>

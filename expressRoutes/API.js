@@ -84,7 +84,7 @@ router.post("/signus", function (req, res) {
         throw { name: 1, message: "This Username is exist!" };
       }
     } catch (e) {
-      res.status(500).json({
+      res.status(200).json({
         status: e.name,
         msg: e.message,
       });

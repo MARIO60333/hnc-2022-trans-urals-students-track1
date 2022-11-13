@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Button from "../UI/Button";
 import s from "./PayPage.module.css"
 import Input from "../UI/Input";
 import Textarea from "../UI/Textarea";

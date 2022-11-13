@@ -1,0 +1,5 @@
+.wp{
+    box-sizing: border-box;
+    padding-bottom: 50%;
+    min-height: calc(80vh - 100px)
+}
