@@ -122,7 +122,7 @@ router.post("/signin", function (req, res) {
         req.session.userid = user.username;
         res.json({
           status: 0,
-        });
+        }).redirect("/")
         console.log(req.session);
       }
     } finally {
