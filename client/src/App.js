@@ -13,7 +13,7 @@ import Login
 import Registration
     from "./components/Registration/Registration";
 
-const App = () => {
+const App = ({password,username}) => {
 
     return (
         <div className="app">
@@ -26,7 +26,7 @@ const App = () => {
                         <Route path="dashboard" element={<Donate/>}/>
                         <Route path="streamername" element={<PayPage/>}/>
                         <Route path="streamer" element={<Streamer/>}/>
-                        <Route path="login" element={<Login/>}/>
+                        <Route path="login" element={<Login password={password} username={username}/>}/>
                         <Route path="register" element={<Registration/>}/>
                         <Route path="*" element={<Error/>}/>
                     </Route>

@@ -9,11 +9,6 @@ const Home = () => {
 
     const [first, setFirst] = useState(false)
 
-    console.log(process.env.REACT_APP_API_URL)
-
-    useEffect(() => {
-        axios.get('/api/signus')
-    },[])
 
     return (
         <>
@@ -59,18 +54,7 @@ const Home = () => {
             <div>
                 <div className={s.second}>
                     <div className={s.second__row}>
-                        <button onChange={() => setFirst(!false)} className={s.second__item}>Донаты</button>
-                        <div className={s.second__item}>Подписки</div>
-                        <div className={s.second__item}>Цели</div>
-                    </div>
 
-                    <div className={s.second__block}>
-                        <div className={s.second__block_item}>
-                            тут текст
-                        </div>
-                        <div className={s.second__block_item}>
-                            тут картинки
-                        </div>
                     </div>
                 </div>
             </div>
