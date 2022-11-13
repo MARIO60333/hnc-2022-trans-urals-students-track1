@@ -33,7 +33,7 @@ webSocketServer.on("connection", (ws) => {
 
   // КОСТЫЛЬ ДЛЯ ДЕМОНСТРАЦИИ
 
-  let lastId = "81af0a53-4aeb-4dfc-bd40-1027508a203b";
+  let lastId = "9d9dd9ed-bbbe-4ee7-96e3-42d55241c9e2";
 
   setInterval(function () {
     console.log("check donations");

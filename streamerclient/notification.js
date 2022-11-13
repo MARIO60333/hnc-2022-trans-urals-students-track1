@@ -3,6 +3,7 @@ class Notification {
     this.type = type;
     this.message = msg;
     this.debug = debug;
+    if(this.debug.amount == null) this.debug.amount = 0
     this.#createNotification();
   }
   #createNotification() {
@@ -12,7 +13,7 @@ class Notification {
 
       let content = `
       <h2>Донат</h2>
-      <h3>${this.debug.amount}</h3>
+      <h3>${this.debug.amount} руб.</h3>
       <br>
       <p>${this.debug.message}</p>
       `
