@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
+}
+
+.notification {
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    margin: 32px auto;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    color: white;
+    animation: fadeIn 0.5s linear 0s forwards, fadeOut 0.5s linear 5.5s forwards;
+}
+
+.ok {
+    border: 2px solid #00e000;
+    background: #00e000B0;
+}
+
+.don {
+    border: 2px solid #00e000;
+    background: #00e000B0;
+}
+
+.err {
+    border: 2px solid #e00000;
+    background: #e00000B0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

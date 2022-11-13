@@ -3,24 +3,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="notification.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const nm_codeid = urlParams.get("nm_codeid");
 
-      let socket = new WebSocket("ws://localhost:5000");
 
-      socket.onopen = function (e) {
-        socket.send(JSON.stringify({
-            nm_codeid: nm_codeid
-        }));
-      };
-
-      socket.onmessage = function (event) {
-        alert(`SERVER STATUS: ${JSON.parse(event.data).status}, SERVER GET NEXT ID: ${JSON.parse(event.data).id}`)
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -13,9 +13,9 @@ const webSocketServer = new WebSocket.Server({ server });
 
 const port = process.env.EXPRESS_PORT || 5000;
 
-
 const root = require("./expressRoutes/Root");
 const api = require("./expressRoutes/API");
+const axios = require("axios");
 
 const dispatchEvent = (message, ws) => {
   const json = JSON.parse(message);
@@ -31,7 +31,34 @@ webSocketServer.on("connection", (ws) => {
   ws.on("message", (m) => dispatchEvent(m, ws));
   ws.on("error", (e) => ws.send(e));
 
-  ws.send("Hi there, I am a WebSocket server");
+  // КОСТЫЛЬ ДЛЯ ДЕМОНСТРАЦИИ
+
+  let lastId = "095cee7e-a37b-41d2-833b-60040777408a";
+
+  setInterval(function () {
+    console.log("check donations");
+    axios({
+      method: "GET",
+      url:process.env.AXIOS_ALFA_URL + "/api/external/v1/transaction/restaurant/overall/comments",
+      headers: { Authorization: process.env.AXIOS_ALFA_TOKEN },
+    }).then(function (response) {
+      let data = response.data.data;
+
+      if (data[0].id != lastId) {
+        lastId = data[0].id;
+        console.log(`NEW ID: ${data[0].id}`);
+        console.log(`${JSON.stringify(data[0])}`)
+        let msg = data[0].message
+        ws.send(JSON.stringify({
+            status: 200,
+            data: msg,
+            debug: data[0]
+        }))
+      }
+    });
+  }, 15000);
+
+  // КОНЕЦ КОСТЫЛЯ
 });
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
@@ -57,5 +84,5 @@ app.use("/", root);
 app.use("/api", api);
 app.use(
   "/streamerclient/",
-  express.static(path.join(__dirname, "streamerclient", "index.html"))
+  express.static(path.join(__dirname, "streamerclient"))
 );
